@@ -30,4 +30,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+## .NET API documentation
+
+`vbDocs.json` contains descriptions of .NET types and members (summary, parameters and return value) taken from
+[.NET API reference documentation](https://github.com/dotnet/dotnet-api-docs) by Microsoft and the .NET Foundation,
+licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+Changes: only the entries for the classes offered by the extension were extracted by `tools/build-docs.js`, cross-references
+were converted to short type names, C# keywords to their Visual Basic form, and remarks and examples were omitted.
+
+When the Windows display language is not English and the .NET Framework IntelliSense files for that language are installed
+on the computer, descriptions are read from those local files at run time; they are not included in the extension.
+
+The type and member signatures in `vbTypes.json` are read by `tools/build-types.js` from the metadata of the .NET Framework 2.0
+installed on the build computer.
+
 vMix is a registered trademark of StudioCoast Pty Ltd. This extension is not affiliated with or endorsed by StudioCoast.
